@@ -16,7 +16,9 @@ command:
 build: ## Builds the application
 	# TODO add golang docker versions as this is how they should all be built
 	go mod tidy
-	
+	CGO_ENABLED=0 GOOS=$(shell go env GOOS) go build -a -installsuffix cgo -o $$GOBIN/kittt
+	du -sh $$GOBIN/kittt
+
 
 test: build ## Builds and then runs tests against the application
 	# TODO break into unit tests and full testing and profiling

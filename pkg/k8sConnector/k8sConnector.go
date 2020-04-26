@@ -37,6 +37,6 @@ func GenerateClientSet() (*kubernetes.Clientset, error) {
 	if err != nil {
 		return nil, err
 	}
-
+	//TODO better error tracking on failure of no such file or security things (check with RBAC) AND then also dont panic but do something better
 	return clientset, nil
 }
