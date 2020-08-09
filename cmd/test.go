@@ -8,6 +8,9 @@ import (
 
 // testCmd represents the test command
 var testCmd = &cobra.Command{
+	Aliases: []string{
+		"t",
+	},
 	Use:   "test",
 	Short: "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples

@@ -11,6 +11,7 @@ helper: # Adapted from: https://marmelab.com/blog/2016/02/29/auto-documented-mak
 	@grep -hE '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 command:
+	#TODO  to run prod version
 	@echo "Hello $(NAME)"
 
 build: ## Builds the application
@@ -34,6 +35,6 @@ run: ## Runs the prod version of the application
 	$(MAKE) command NAME="marjamis"
 
 dev: ## Runs a dev version of the application
-	go run main.go getObjects
+	go run main.go get --output=stdout all
 
 clean: ## Cleans up any old/unneeded items

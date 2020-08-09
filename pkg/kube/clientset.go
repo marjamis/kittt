@@ -1,4 +1,4 @@
-package k8sConnector
+package kube
 
 import (
 	"flag"

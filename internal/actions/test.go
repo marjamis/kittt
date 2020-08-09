@@ -2,7 +2,7 @@ package actions
 
 var (
 	// Creates the array of Test actions broken down by category
-	TestCategories = ActionCategories{}
+	TestCategories = ActionTypes{}
 )
 
 func init() {

@@ -10,6 +10,9 @@ import (
 
 var (
 	getCmd = &cobra.Command{
+		Aliases: []string{
+			"g",
+		},
 		Use:   "get",
 		Short: "Performs Kubernetes API calls to return data about the cluster",
 		Long:  `To aid in troubleshooting the get call will go through a list, either an existing category or all options and provide the output to be used for troubleshooting.`,
@@ -17,6 +20,7 @@ var (
 			if err := getValidate(); err != nil {
 				fmt.Println("TODO STUB for an error")
 			}
+			//TODO have something here and rethink the cli scheme
 		},
 	}
 

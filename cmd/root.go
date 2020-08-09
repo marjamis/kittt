@@ -21,6 +21,7 @@ examples and usage of using your application. For example:
 Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
+	Version: "0.1.1",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	//	Run: func(cmd *cobra.Command, args []string) { },
@@ -33,6 +34,8 @@ func Execute() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+
+	//TODO For fun an in the GenBashCompletion from cobra into this and run in my shell
 }
 
 func init() {

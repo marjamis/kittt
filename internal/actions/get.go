@@ -13,7 +13,7 @@ import (
 
 var (
 	// Creates the array of Get actions broken down by category
-	GetCategories = ActionCategories{}
+	GetCategories = ActionTypes{}
 
 	//
 	awsAuthConfigMap = &Data{
@@ -25,7 +25,10 @@ var (
 			return results, err
 		},
 		Categories: []string{
-			"dns",
+			"auth",
+		},
+		Platforms: []string{
+			"eks",
 		},
 	}
 
@@ -44,6 +47,9 @@ var (
 		},
 		Categories: []string{
 			"cni",
+		},
+		Platforms: []string{
+			"eks",
 		},
 	}
 )
